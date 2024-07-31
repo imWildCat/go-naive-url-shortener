@@ -1,0 +1,10 @@
+
+services:
+  url-shortener:
+    build: .
+    ports:
+      - "8088:8080"
+    volumes:
+      - ./data/config.txt:/app/config.txt
+    restart: unless-stopped
+
